@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d26;
+    color: white;
+    text-align: center;
+background: linear-gradient(180deg, #545470 0%, #110F0F 100%);
+
+
+    
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.bar {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+}
+.search-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+}
+.search-box input {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    width: 70%;
+    max-width: 400px;
+    text-align: center;
+    background-color: #3A3A75;
+}
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.signup {
+    background: hotpink;
+    color: white;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Напівпрозорість для ефекту */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 13, 38, 0.7);
+}
+
+h1 {
+    position: relative;
+    z-index: 2;
+
+font-family: 'Jura';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 76px;
+color: rgba(255, 255, 255, 0.6);
+
+backdrop-filter: blur(2px);
+
+
+}
+.burger-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    padding-top: 60px;
+    transition: 0.3s;
+background: linear-gradient(180deg, #55556F 0%, #242443 73.67%);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 0px 20px 20px 0px;
+
+
+}
+.burger-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.burger-menu ul li {
+    padding: 15px;
+}
+.burger-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 15px;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .search-box input {
+        width: 100%;
+        max-width: 250px;
+    }
+    .buttons {
+        gap: 5px;
+    }
+    .buttons button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px 120px 140px;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
+.text-block {
+    width: 50%;
+    text-align: left;
+    position: relative;
+}
+.number-img {
+    position: absolute;
+    top: -30px;
+    left: -80px;
+    width: 200px;
+    opacity: 0.7;
+}
+.image-block {
+    width: 40%;
+}
+.image-block img {
+    width: 100%;
+    border-radius: 10px;
+}
+.golden-text {
+font-family: 'Gilroy';
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 22px;
+color: #FBD784;
+
+}
+.h2{
+font-family: 'Abhaya Libre ExtraBold';
+font-style: normal;
+font-weight: 800;
+font-size: 60px;
+line-height: 76px;
+color: #FFFFFF;
+}
+p{
+font-family: 'Glegoo';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+color: #FFFFFF;
+
+}
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    .text-block, .image-block {
+        width: 90%;
+    }
+    .reverse {
+        flex-direction: column;
+    }
+    .number-img {
+        top: -30px;
+        left: 0;
+        width: 150px;
+    }
+}
