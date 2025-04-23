@@ -259,3 +259,109 @@ h2 {
   .hidden {
     display: none;
   }
+
+  footer {
+    position: relative;
+    background: linear-gradient(180deg, #1a0f2f 0%, #0d0d0d 100%);
+    padding: 5rem 11rem 8rem;
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+    z-index: 2;
+    position: relative;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a46cff;
+    text-shadow: 0 0 15px #a46cff88;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #c5b0e0;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav a {
+    color: #b095d4;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #a46cff;
+    transition: width 0.3s;
+}
+
+.nav a:hover {
+    color: #d4baff;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.socials {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.socials a {
+    font-size: 1.6rem;
+    color: #8c7bbd;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.socials a:hover {
+    transform: scale(1.3) rotate(-5deg);
+    color: #a46cff;
+}
+
+canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    opacity: 0.1;
+}

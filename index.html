@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synerbeat</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon_synerbeat.ico" />
     <script defer src="script.js"></script>
 </head>
 
@@ -27,7 +28,7 @@
     <section class="hero">
         <img src="img/backg.png" alt="Concert" class="hero-image">
         <div class="overlay"></div>
-        <h1>Music that speaks for you</h1>
+        <h1 id="H">Music that speaks for you</h1>
     </section>
     <div class="burger-menu" id="burger-menu">
         <ul>
@@ -40,7 +41,7 @@
         <div class="text-block">
             <img src="img/num1.png" alt="01" class="number-img">
             <p class="golden-text">------Every sound tells a story.</p>
-            <h2 class="h2">How did it all start?</h2>
+            <h2 class="h2" id="A">How did it all start?</h2>
             <p>This site was born from a single random melody.
                 One evening I was walking through the city, an old track that I hadn’t listened to in years was playing
                 in my headphones. Suddenly the whole world around me changed: the lights lit up brighter, the wind
@@ -93,8 +94,64 @@
     </section>
     <div class="container">
         <p class="play">Press "Play" and let your story play.</p>
-        <a href="#" class="btn">PLAY</a>
+        <a href="album.html" class="btn">PLAY</a>
     </div>
+    
+    
+    <footer>
+      <div class="footer-content">
+        <div class="logo">Synerbeat</div>
+        <p class="tagline">Feel every beat. Immerse yourself in music that speaks instead of words. Here your sound comes to life.</p>
+        
+        <nav class="nav">
+          <a href="#H">Home</a>
+          <a href="album.html">Albums</a>
+          <a href="#A">About us</a>
+        </nav>
+    
+        <div class="socials">
+          <a href="https://soundcloud.com/you/apps" title="Soundcloud">🎵</a>
+          <a href="https://www.instagram.com/soundcloud?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram">📸</a>
+          <a href="https://www.youtube.com/c/SoundCloud" title="YouTube">▶️</a>
+          <a href="http://twitter.com/soundcloud" title="Twitter">🎬</a>
+        </div>
+      </div>
+      <canvas id="waveCanvas"></canvas>
+    </footer>
+    
+    <script>
+      const canvas = document.getElementById('waveCanvas');
+      const ctx = canvas.getContext('2d');
+    
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = 100;
+      }
+    
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+    
+      let step = 0;
+      function drawWave() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        const amplitude = 30;
+        const frequency = 0.02;
+    
+        for (let x = 0; x < canvas.width; x++) {
+          const y = amplitude * Math.sin(frequency * (x + step)) + canvas.height / 2;
+          ctx.lineTo(x, y);
+        }
+    
+        ctx.strokeStyle = '#a46cff';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        step += 1;
+        requestAnimationFrame(drawWave);
+      }
+    
+      drawWave();
+    </script>
 </body>
 
 </html>

@@ -16,3 +16,4 @@ function filterPlaylists(category) {
         tile.classList.add('hidden');
     }
 });
+

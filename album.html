@@ -2,158 +2,219 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synerbeat</title>
-    <link rel="stylesheet" href="stylealb.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synerbeat</title>
+  <link rel="stylesheet" href="stylealb.css">
+  <link rel="icon" href="img/favicon_synerbeat.ico" />
+  <script defer src="script.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <div class="search-box">
-            <input type="text" placeholder="What do you want to listen to?">
-        </div>
-        <div class="buttons">
-            <button class="login">Login</button>
-            <button class="signup">Sign Up</button>
-        </div>
-    </header>
-    <section class="hero">
-        <img src="img/backg.png" alt="Concert" class="hero-image">
-        <div class="overlay"></div>
-        <div class="cont1">
-            <img class="logow" src="img/screenlogo.png">
-            <h1>Music that speaks for you</h1>
-        </div>
-    </section>
-    <div class="burger-menu" id="burger-menu">
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ALBUMS</a></li>
-            <li><a href="#">FAVORITES</a></li>
-        </ul>
+  <header>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
-
-<h2>🎧 Обери настрій і слухай</h2>
-
-<div class="filter-buttons">
-  <button onclick="filterPlaylists('all')">Усі</button>
-  <button onclick="filterPlaylists('chill')">Chill</button>
-  <button onclick="filterPlaylists('workout')">Workout</button>
-  <button onclick="filterPlaylists('jazz')">Jazz</button>
-  <button onclick="filterPlaylists('pop')">Pop</button>
-  <button onclick="filterPlaylists('disco')">Disco</button>
-</div>
-
-<div class="playlist-grid">
-
-  <!-- Mellow Melodies -->
-  <div class="playlist-tile" data-category="chill">
-    <iframe class="playlist-frame" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710970068&color=%23ff5500&visual=true"></iframe>
-    <div class="playlist-info">
-      <h3>Mellow Melodies</h3>
-      <p>Релакс і ніжність у кожній ноті 🌙</p>
+    <div class="search-box">
+      <input type="text" placeholder="What do you want to listen to?">
     </div>
+    <div class="buttons">
+      <button class="login">Login</button>
+      <button class="signup">Sign Up</button>
+    </div>
+  </header>
+  <section class="hero">
+    <img src="img/backg.png" alt="Concert" class="hero-image">
+    <div class="overlay"></div>
+    <div class="cont1">
+      <img class="logow" src="img/screenlogo.png">
+      <h1>Music that speaks for you</h1>
+    </div>
+  </section>
+  <div class="burger-menu" id="burger-menu">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ALBUMS</a></li>
+      <li><a href="#">FAVORITES</a></li>
+    </ul>
   </div>
 
-  <!-- Techno Chill -->
-  <div class="playlist-tile" data-category="chill">
-    <iframe class="playlist-frame" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969660&color=%23ff5500&visual=true"></iframe>
-    <div class="playlist-info">
-      <h3>Techno Chill</h3>
-      <p>Електроніка для спокійного фону та натхнення 🎛️</p>
-    </div>
+  <h2>🎧 Обери настрій і слухай</h2>
+
+  <div class="filter-buttons">
+    <button onclick="filterPlaylists('all')">Усі</button>
+    <button onclick="filterPlaylists('chill')">Chill</button>
+    <button onclick="filterPlaylists('workout')">Workout</button>
+    <button onclick="filterPlaylists('jazz')">Jazz</button>
+    <button onclick="filterPlaylists('pop')">Pop</button>
+    <button onclick="filterPlaylists('disco')">Disco</button>
   </div>
 
-  <!-- Decompress Jazz -->
-  <div class="playlist-tile" data-category="jazz">
-    <iframe class="playlist-frame" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969819&color=%23ff5500&visual=true"></iframe>
-    <div class="playlist-info">
-      <h3>Decompress Jazz</h3>
-      <p>Легка імпровізація для розслаблення 🎷</p>
+  <div class="playlist-grid">
+
+    <!-- Mellow Melodies -->
+    <div class="playlist-tile" data-category="chill">
+      <iframe class="playlist-frame"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710970068&color=%23ff5500&visual=true"></iframe>
+      <div class="playlist-info">
+        <h3>Mellow Melodies</h3>
+        <p>Релакс і ніжність у кожній ноті 🌙</p>
+      </div>
     </div>
+
+    <!-- Techno Chill -->
+    <div class="playlist-tile" data-category="chill">
+      <iframe class="playlist-frame"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969660&color=%23ff5500&visual=true"></iframe>
+      <div class="playlist-info">
+        <h3>Techno Chill</h3>
+        <p>Електроніка для спокійного фону та натхнення 🎛️</p>
+      </div>
+    </div>
+
+    <!-- Decompress Jazz -->
+    <div class="playlist-tile" data-category="jazz">
+      <iframe class="playlist-frame"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969819&color=%23ff5500&visual=true"></iframe>
+      <div class="playlist-info">
+        <h3>Decompress Jazz</h3>
+        <p>Легка імпровізація для розслаблення 🎷</p>
+      </div>
+    </div>
+
+    <!-- Ambient Flow State -->
+    <div class="playlist-tile" data-category="chill">
+      <iframe class="playlist-frame"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710968721&color=%23ff5500&visual=true"></iframe>
+      <div class="playlist-info">
+        <h3>Ambient Flow State</h3>
+        <p>Для медитації, глибокої роботи або просто релаксу 🌀</p>
+      </div>
+    </div>
+
+    <!-- Techno Circuits Workout -->
+    <div class="playlist-tile" data-category="workout">
+      <iframe class="playlist-frame"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710968325&color=%23ff5500&visual=true"></iframe>
+      <div class="playlist-info">
+        <h3>Techno Circuits Workout</h3>
+        <p>Драйвовий біг чи тренування під пульс техно 💥</p>
+      </div>
+    </div>
+
+    <!-- EDM Workout -->
+    <div class="playlist-tile" data-category="workout">
+      <iframe class="playlist-frame"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710968400&color=%23ff5500&visual=true"></iframe>
+      <div class="playlist-info">
+        <h3>EDM Workout</h3>
+        <p>Енергія електроніки для максимального результату ⚡</p>
+      </div>
+    </div>
+
+    <!-- Pop Roadtrip -->
+    <div class="playlist-tile" data-category="pop">
+      <iframe class="playlist-frame"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969426&color=%23ff5500&visual=true"></iframe>
+      <div class="playlist-info">
+        <h3>Pop Roadtrip</h3>
+        <p>Підкорюй дороги з поп-хітами 🌄</p>
+      </div>
+    </div>
+
+    <!-- Disco Fever -->
+    <div class="playlist-tile" data-category="disco">
+      <iframe class="playlist-frame"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969402&color=%23ff5500&visual=true"></iframe>
+      <div class="playlist-info">
+        <h3>Disco Fever</h3>
+        <p>Вогонь 70-х і блиск диско-куль ✨🪩</p>
+      </div>
+    </div>
+
+    <!-- Soulful Mornings -->
+    <div class="playlist-tile" data-category="chill">
+      <iframe class="playlist-frame"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969999&color=%23ff5500&visual=true"></iframe>
+      <div class="playlist-info">
+        <h3>Soulful Mornings</h3>
+        <p>Ідеальний супровід до кави ☕ та нового дня</p>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Ambient Flow State -->
-  <div class="playlist-tile" data-category="chill">
-    <iframe class="playlist-frame" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710968721&color=%23ff5500&visual=true"></iframe>
-    <div class="playlist-info">
-      <h3>Ambient Flow State</h3>
-      <p>Для медитації, глибокої роботи або просто релаксу 🌀</p>
+  <script>
+    function filterPlaylists(category) {
+      const allTiles = document.querySelectorAll('.playlist-tile');
+      allTiles.forEach(tile => {
+        if (category === 'all' || tile.dataset.category === category) {
+          tile.classList.remove('hidden');
+        } else {
+          tile.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+
+<footer>
+  <div class="footer-content">
+    <div class="logo">Synerbeat</div>
+    <p class="tagline">Feel every beat. Immerse yourself in music that speaks instead of words. Here your sound comes to life.</p>
+    
+    <nav class="nav">
+      <a href="#H">Home</a>
+      <a href="#">Albums</a>
+      <a href="#A">About us</a>
+    </nav>
+
+    <div class="socials">
+      <a href="https://soundcloud.com/you/apps" title="Soundcloud">🎵</a>
+      <a href="https://www.instagram.com/soundcloud?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram">📸</a>
+      <a href="https://www.youtube.com/c/SoundCloud" title="YouTube">▶️</a>
+      <a href="http://twitter.com/soundcloud" title="Twitter">🎬</a>
     </div>
   </div>
-
-  <!-- Techno Circuits Workout -->
-  <div class="playlist-tile" data-category="workout">
-    <iframe class="playlist-frame" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710968325&color=%23ff5500&visual=true"></iframe>
-    <div class="playlist-info">
-      <h3>Techno Circuits Workout</h3>
-      <p>Драйвовий біг чи тренування під пульс техно 💥</p>
-    </div>
-  </div>
-
-  <!-- EDM Workout -->
-  <div class="playlist-tile" data-category="workout">
-    <iframe class="playlist-frame" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710968400&color=%23ff5500&visual=true"></iframe>
-    <div class="playlist-info">
-      <h3>EDM Workout</h3>
-      <p>Енергія електроніки для максимального результату ⚡</p>
-    </div>
-  </div>
-
-  <!-- Pop Roadtrip -->
-  <div class="playlist-tile" data-category="pop">
-    <iframe class="playlist-frame" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969426&color=%23ff5500&visual=true"></iframe>
-    <div class="playlist-info">
-      <h3>Pop Roadtrip</h3>
-      <p>Підкорюй дороги з поп-хітами 🌄</p>
-    </div>
-  </div>
-
-  <!-- Disco Fever -->
-  <div class="playlist-tile" data-category="disco">
-    <iframe class="playlist-frame" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969402&color=%23ff5500&visual=true"></iframe>
-    <div class="playlist-info">
-      <h3>Disco Fever</h3>
-      <p>Вогонь 70-х і блиск диско-куль ✨🪩</p>
-    </div>
-  </div>
-
-  <!-- Soulful Mornings -->
-  <div class="playlist-tile" data-category="chill">
-    <iframe class="playlist-frame" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1710969999&color=%23ff5500&visual=true"></iframe>
-    <div class="playlist-info">
-      <h3>Soulful Mornings</h3>
-      <p>Ідеальний супровід до кави ☕ та нового дня</p>
-    </div>
-  </div>
-
-</div>
+  <canvas id="waveCanvas"></canvas>
+</footer>
 
 <script>
-  function filterPlaylists(category) {
-    const allTiles = document.querySelectorAll('.playlist-tile');
-    allTiles.forEach(tile => {
-      if (category === 'all' || tile.dataset.category === category) {
-        tile.classList.remove('hidden');
-      } else {
-        tile.classList.add('hidden');
-      }
-    });
+  const canvas = document.getElementById('waveCanvas');
+  const ctx = canvas.getContext('2d');
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = 100;
   }
+
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  let step = 0;
+  function drawWave() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
+    const amplitude = 30;
+    const frequency = 0.02;
+
+    for (let x = 0; x < canvas.width; x++) {
+      const y = amplitude * Math.sin(frequency * (x + step)) + canvas.height / 2;
+      ctx.lineTo(x, y);
+    }
+
+    ctx.strokeStyle = '#a46cff';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    step += 1;
+    requestAnimationFrame(drawWave);
+  }
+
+  drawWave();
 </script>
 
-</body>
-</html>
 
-      
-      
-      </body>
+</body>
 
 </html>
