@@ -21,27 +21,26 @@
       <input type="text" placeholder="What do you want to listen to?">
     </div>
     <div class="buttons">
-      <button class="login">Login</button>
-      <button class="signup">Sign Up</button>
-    </div>
+      <button class="login" onclick="location.href='log.html'">Login</button>
+      <button class="signup" onclick="location.href='log.html'">Sign Up</button>
+  </div>
   </header>
   <section class="hero">
     <img src="img/backg.png" alt="Concert" class="hero-image">
     <div class="overlay"></div>
     <div class="cont1">
       <img class="logow" src="img/screenlogo.png">
-      <h1>Music that speaks for you</h1>
+      <h1 id="H">Music that speaks for you</h1>
     </div>
   </section>
   <div class="burger-menu" id="burger-menu">
     <ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">ALBUMS</a></li>
-      <li><a href="#">FAVORITES</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="album.html">ALBUMS</a></li>
     </ul>
   </div>
 
-  <h2>🎧 Обери настрій і слухай</h2>
+  <h2 id="A">🎧 Обери настрій і слухай</h2>
 
   <div class="filter-buttons">
     <button onclick="filterPlaylists('all')">Усі</button>
@@ -159,60 +158,61 @@
     }
   </script>
 
-<footer>
-  <div class="footer-content">
-    <div class="logo">Synerbeat</div>
-    <p class="tagline">Feel every beat. Immerse yourself in music that speaks instead of words. Here your sound comes to life.</p>
-    
-    <nav class="nav">
-      <a href="#H">Home</a>
-      <a href="#">Albums</a>
-      <a href="#A">About us</a>
-    </nav>
+  <footer>
+    <div class="footer-content">
+      <div class="logo">Synerbeat</div>
+      <p class="tagline">Feel every beat. Immerse yourself in music that speaks instead of words. Here your sound comes
+        to life.</p>
 
-    <div class="socials">
-      <a href="https://soundcloud.com/you/apps" title="Soundcloud">🎵</a>
-      <a href="https://www.instagram.com/soundcloud?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram">📸</a>
-      <a href="https://www.youtube.com/c/SoundCloud" title="YouTube">▶️</a>
-      <a href="http://twitter.com/soundcloud" title="Twitter">🎬</a>
+      <nav class="nav">
+        <a href="#H">Home</a>
+        <a href="#A">Albums</a>
+      </nav>
+
+      <div class="socials">
+        <a href="https://soundcloud.com/you/apps" title="Soundcloud">🎵</a>
+        <a href="https://www.instagram.com/soundcloud?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          title="Instagram">📸</a>
+        <a href="https://www.youtube.com/c/SoundCloud" title="YouTube">▶️</a>
+        <a href="http://twitter.com/soundcloud" title="Twitter">🎬</a>
+      </div>
     </div>
-  </div>
-  <canvas id="waveCanvas"></canvas>
-</footer>
+    <canvas id="waveCanvas"></canvas>
+  </footer>
 
-<script>
-  const canvas = document.getElementById('waveCanvas');
-  const ctx = canvas.getContext('2d');
+  <script>
+    const canvas = document.getElementById('waveCanvas');
+    const ctx = canvas.getContext('2d');
 
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = 100;
-  }
-
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
-
-  let step = 0;
-  function drawWave() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    const amplitude = 30;
-    const frequency = 0.02;
-
-    for (let x = 0; x < canvas.width; x++) {
-      const y = amplitude * Math.sin(frequency * (x + step)) + canvas.height / 2;
-      ctx.lineTo(x, y);
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = 100;
     }
 
-    ctx.strokeStyle = '#a46cff';
-    ctx.lineWidth = 2;
-    ctx.stroke();
-    step += 1;
-    requestAnimationFrame(drawWave);
-  }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-  drawWave();
-</script>
+    let step = 0;
+    function drawWave() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+      const amplitude = 30;
+      const frequency = 0.02;
+
+      for (let x = 0; x < canvas.width; x++) {
+        const y = amplitude * Math.sin(frequency * (x + step)) + canvas.height / 2;
+        ctx.lineTo(x, y);
+      }
+
+      ctx.strokeStyle = '#a46cff';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      step += 1;
+      requestAnimationFrame(drawWave);
+    }
+
+    drawWave();
+  </script>
 
 
 </body>

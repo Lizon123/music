@@ -21,7 +21,7 @@ header {
     left: 0;
     z-index: 1000;
     box-sizing: border-box;
-    background-color:#242443b8
+    background-color: #242443b8
 }
 
 .menu-toggle {
@@ -101,7 +101,7 @@ header {
     background: rgba(13, 13, 38, 0.7);
 }
 
-.cont1{
+.cont1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,9 +109,11 @@ header {
     max-width: 100%;
 
 }
-.logow{
+
+.logow {
     height: 300px;
 }
+
 h1 {
     position: relative;
     z-index: 2;
@@ -182,14 +184,14 @@ h2 {
     text-align: center;
     color: #ff5500;
     margin-top: 2rem;
-  }
+}
 
-  .filter-buttons {
+.filter-buttons {
     text-align: center;
     margin: 1rem auto;
-  }
+}
 
-  .filter-buttons button {
+.filter-buttons button {
     background: #2c2c2e;
     border: 1px solid #ff5500;
     border-radius: 20px;
@@ -199,24 +201,24 @@ h2 {
     color: #ff5500;
     font-weight: 600;
     transition: background 0.2s, transform 0.2s;
-  }
+}
 
-  .filter-buttons button:hover {
+.filter-buttons button:hover {
     background: #ff5500;
     color: #1c1c1e;
     transform: scale(1.05);
-  }
+}
 
-  .playlist-grid {
+.playlist-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
     padding: 2rem;
     max-width: 1400px;
     margin: auto;
-  }
+}
 
-  .playlist-tile {
+.playlist-tile {
     background: #2a2a2d;
     border-radius: 20px;
     overflow: hidden;
@@ -225,42 +227,42 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease;
-  }
+}
 
-  .playlist-tile:hover {
+.playlist-tile:hover {
     transform: scale(1.02);
-  }
+}
 
-  .playlist-frame {
+.playlist-frame {
     border: none;
     width: 100%;
     height: 300px;
-  }
+}
 
-  .playlist-info {
+.playlist-info {
     padding: 1rem;
     background: #1f1f22;
     text-align: center;
     font-size: 14px;
-  }
+}
 
-  .playlist-info h3 {
+.playlist-info h3 {
     margin: 0 0 0.3rem;
     font-size: 1.1rem;
     color: #ff5500;
-  }
+}
 
-  .playlist-info p {
+.playlist-info p {
     margin: 0;
     color: #ccc;
     font-size: 13px;
-  }
+}
 
-  .hidden {
+.hidden {
     display: none;
-  }
+}
 
-  footer {
+footer {
     position: relative;
     background: linear-gradient(180deg, #1a0f2f 0%, #0d0d0d 100%);
     padding: 5rem 11rem 8rem;

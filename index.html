@@ -21,9 +21,10 @@
             <input type="text" placeholder="What do you want to listen to?">
         </div>
         <div class="buttons">
-            <button class="login">Login</button>
-            <button class="signup">Sign Up</button>
+            <button class="login" onclick="location.href='log.html'">Login</button>
+            <button class="signup" onclick="location.href='log.html'">Sign Up</button>
         </div>
+          
     </header>
     <section class="hero">
         <img src="img/backg.png" alt="Concert" class="hero-image">
@@ -32,9 +33,8 @@
     </section>
     <div class="burger-menu" id="burger-menu">
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ALBUMS</a></li>
-            <li><a href="#">FAVORITES</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="album.html">ALBUMS</a></li>
         </ul>
     </div>
     <section class="content-section">
@@ -120,38 +120,38 @@
     </footer>
     
     <script>
-      const canvas = document.getElementById('waveCanvas');
-      const ctx = canvas.getContext('2d');
-    
-      function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = 100;
-      }
-    
-      resizeCanvas();
-      window.addEventListener('resize', resizeCanvas);
-    
-      let step = 0;
-      function drawWave() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.beginPath();
-        const amplitude = 30;
-        const frequency = 0.02;
-    
-        for (let x = 0; x < canvas.width; x++) {
-          const y = amplitude * Math.sin(frequency * (x + step)) + canvas.height / 2;
-          ctx.lineTo(x, y);
+        const canvas = document.getElementById('waveCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = 100;
         }
-    
-        ctx.strokeStyle = '#a46cff';
-        ctx.lineWidth = 2;
-        ctx.stroke();
-        step += 1;
-        requestAnimationFrame(drawWave);
-      }
-    
-      drawWave();
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        let step = 0;
+        function drawWave() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            const amplitude = 30;
+            const frequency = 0.02;
+
+            for (let x = 0; x < canvas.width; x++) {
+                const y = amplitude * Math.sin(frequency * (x + step)) + canvas.height / 2;
+                ctx.lineTo(x, y);
+            }
+
+            ctx.strokeStyle = '#a46cff';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            step += 1;
+            requestAnimationFrame(drawWave);
+        }
+
+        drawWave();
     </script>
-</body>
+    </body>
 
 </html>
